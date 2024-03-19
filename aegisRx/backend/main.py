@@ -13,5 +13,15 @@ def login():
 def logout():
     #fill these in once firebase auth is working
 
+@app.route("/research")
+def research():
+    #medline shit
+    #fill these in once firebase auth is working
+
+@app.route("/interactions")
+def interactions():
+    #fill these in once firebase auth is working
+
+
 if __name__ == "__main__":
   app.run()
