@@ -22,21 +22,14 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us</a>
+            <a href="./OpeningPage.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+            <a href="./About.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us</a>
           </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Login</a>
+        <a href="./Login.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Login</a>
       </div>
-    </div>
-  </div>
-
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pb-3 pt-2">
-      <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About Us</a>
     </div>
   </div>
 </nav>
@@ -75,15 +68,15 @@
                 </div>
             </div>
             <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
-                <img src="/Users/rkomati/Downloads/1098028.png" class="max-w-xs md:max-w-sm m-auto"/>
+                <img src="./frontend/public/1098028.png" class="max-w-xs md:max-w-sm m-auto"/>
             </div>
         </div>
     </div>
     <footer class="bg-white dark:bg-gray-900">
       <div class = "w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+        <a href="./OpeningPage.vue" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src="/Users/rkomati/Documents/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" class="h-8" alt="Aegis Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Aegis</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AegisRx</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
