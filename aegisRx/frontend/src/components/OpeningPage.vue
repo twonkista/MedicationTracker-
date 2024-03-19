@@ -1,4 +1,6 @@
-
+<script>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 <template>
 <nav class="bg-sky-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -24,13 +26,13 @@
         <div class="hidden sm:ml-12 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="./OpeningPage.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
-            <a href="./About.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us</a>
+            <RouterLink to ="/about" class = "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us</RouterLink>
+            <RouterLink to = "/" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</RouterLink>
           </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <a href="./Login.vue" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Login</a>
+        <RouterLink to = "/login" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Login</RouterLink>
       </div>
     </div>
   </div>
@@ -61,12 +63,12 @@
                   </ul>
                 </header>
                 <div class="flex mt-8">
-                    <a href="#" class="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400">
+                    <RouterLink to = "/login" class="uppercase py-2 px-4 rounded-lg bg-blue-700 border-2 border-transparent text-white text-md mr-4 hover:bg-blue-400">
                         Sign Up
-                    </a>
-                    <a href="#" class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md">
+                    </RouterLink>
+                    <RouterLink to = "/about" class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-blue-700 text-blue-400 dark:text-white hover:bg-blue-400 hover:text-white text-md">
                         Learn More
-                    </a>
+                    </RouterLink>
                 </div>
             </div>
             <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
@@ -75,22 +77,22 @@
         </div>
     </div>
     <footer class="bg-white dark:bg-gray-900 max-h-full">
-      <div class = "w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <a href="./OpeningPage.vue" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <div class = "w-full max-w-screen-xl mx-auto p-12 md:py-8">
+        <RouterLink to = "/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src="/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" class="h-8" alt="Aegis Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AegisRx</span>
-            </a>
+        </RouterLink>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    <RouterLink to = "/about" class="hover:underline me-4 md:me-6">About</RouterLink>
                 </li>
                 <li>
                     <a href="https://github.com/twonkista/MedicationTracker-" class="hover:underline me-4 md:me-6">Github</a>
                 </li>
             </ul>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2019
+        <RouterLink to = "/" class="hover:underline">AegisRx</RouterLink><a>. No Rights Reserved.</a></span>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="./OpeningPage.vue" class="hover:underline">AegisRx</a>. No Rights Reserved.</span>
-
     </footer>
 </template>

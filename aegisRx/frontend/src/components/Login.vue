@@ -1,6 +1,6 @@
 <template>
-
-</template>
-<scrip>
     
-</scrip>
+</template>
+<script>
+
+</script>

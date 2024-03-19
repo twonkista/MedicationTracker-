@@ -1,8 +1,11 @@
 <script setup>
 import OP from './components/OpeningPage.vue'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <OP />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
