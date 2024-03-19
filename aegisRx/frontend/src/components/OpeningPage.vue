@@ -1,3 +1,4 @@
+
 <template>
 <nav class="bg-sky-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -17,9 +18,10 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-8 w-auto" src="/Users/rkomati/Documents/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" alt="Your Company">
+          <img class="h-12 w-auto" src="/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" alt="Aegis">
+          <header class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">AegisRx</header>
         </div>
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="hidden sm:ml-12 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="./OpeningPage.vue" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
@@ -68,14 +70,14 @@
                 </div>
             </div>
             <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
-                <img src="./frontend/public/1098028.png" class="max-w-xs md:max-w-sm m-auto"/>
+                <img src="/1098028.png" class="max-w-xs md:max-w-sm m-auto"/>
             </div>
         </div>
     </div>
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="bg-white dark:bg-gray-900 max-h-full">
       <div class = "w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <a href="./OpeningPage.vue" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="/Users/rkomati/Documents/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" class="h-8" alt="Aegis Logo" />
+                <img src="/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" class="h-8" alt="Aegis Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AegisRx</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -88,5 +90,7 @@
             </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="./OpeningPage.vue" class="hover:underline">AegisRx</a>. No Rights Reserved.</span>
+
     </footer>
 </template>
