@@ -5,9 +5,12 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i ./style.css -o ./dist/output.css --watch"
+    "build": "npx tailwindcss -i ./mysite/static/css/style.css -o ./static/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.4"
+  }
 }
