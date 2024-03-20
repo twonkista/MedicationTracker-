@@ -5,6 +5,7 @@ views = Blueprint('views', __name__)
 def home():
     return render_template('index.html')
 
+<<<<<<< HEAD
 @views.route('/home')
 def homeback():
     return render_template('index.html')
@@ -16,3 +17,12 @@ def signin():
 @views.route('/signupPage')
 def signup():
     return render_template('signup.html')
+=======
+@views.route("/research")
+def research():
+    #fill these in once firebase auth is working
+
+@views.route("/interactions")
+def interactions():
+    #fill these in once firebase auth is working
+>>>>>>> refs/remotes/origin/master
