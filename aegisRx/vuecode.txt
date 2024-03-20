@@ -1,7 +1,3 @@
-<script>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-<template>
 <nav class="bg-sky-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
@@ -95,4 +91,3 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to = "/" class="hover:underline">AegisRx</RouterLink><a>. No Rights Reserved.</a></span>
         </div>
     </footer>
-</template>
