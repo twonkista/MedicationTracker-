@@ -30,3 +30,38 @@ def getData(ncode):
   
   else:
     print("Error: Failed to retrieve data from the MedLine Connect Plus API")
+
+def getInteractions(ncode):
+  base_url = "https://api.fda.gov/drug/label.json?"
+  search = {
+  "search":"openfda.product_ndc.exact:\"50090-0481\""
+  }
+  response = requests.get(base_url, params=search)
+  # Extract the data from the response
+  data = response.json()
+  if(data['results'][0]['drug_interactions_table']):
+    return data['results'][0]['drug_interactions_table']
+  else:
+    print("No interactions found")
+    return " "
+  
+# Use code in the botom to test it
+# ncodeValue = input("Enter the ndc Code you want to see data for: ")
+# getData(ncodeValue)
+# ncodeVal = input("Enter the ndc Code you want to see interactions for: ")
+
+  # Resets to standard html page before writing to file
+# with open('test.html','w') as file:
+#   file.write("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<title>Document</title>\n</head>\n<body></body>\n</html>")
+
+  
+# htmlVal = getInteractions(ncodeVal)
+# with open('test.html','r') as file:
+#   html = file.read()
+
+# index1 = html.find('<body>')
+# index2 = html.find('</body>')
+# html2 = html[:index1]+htmlVal[0]+ html[index2:]
+  
+# with open('test.html','w') as file:
+#   file.write(html2)
