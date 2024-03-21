@@ -10,5 +10,5 @@ Such features include:
 -Interaction lookup
 -UI Updates and bug fixes
 
-Once you log out
+Once you log in
 <img width="1434" alt="Screenshot 2024-03-21 at 4 05 44 PM" src="https://github.com/twonkista/MedicationTracker-/assets/65195116/3f677fa5-7317-4c74-a461-53012cffd04c">
