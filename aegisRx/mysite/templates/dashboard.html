@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-    
+    <nav class="navbar is-info">
+        <div class="navbar-brand">
+          <a class="image is-64x64"" href="/home">
+            <img src="/static/icons/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" alt="Bulma: a modern CSS framework based on Flexbox" width="64" height="64">
+          </a>
+        </div>
+        
+        <button href="/logout" class="button is-dark" class="button is-large">Log Out</button>
+    </nav>
+    <h1 align="center">Meds</h1>
+    <ol type="1" id = "meds">
+        {% for med in user.meds%}
+        <li>{{ user.drug_name }}</li>
+        <li>{{ user.reason }}</li>
+        <li>{{ user.start_date }}</li>
+        {%endfor%}
+    </ol>
+    <form method="POST">
+        <input class="input is-link" type="text" placeholder="drug" name="drug">
+        <textarea name="reason" id="reason"></textarea>
+        <div class="control">
+            <label class="radio">
+              <input type="radio" name="taken" />
+              Taken
+            </label>
+            <label class="radio">
+              <input type="radio" name="notyet" checked />
+              Not Yet
+            </label>
+          </div>
+          <input class="input is-link" type="text" placeholder="frequency" name="freqdays">
+        <button type="submit">Add Medication</button>
+    </form>
 </body>
 </html>

@@ -4,13 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
     <nav class="navbar is-info">
         <div class="navbar-brand">
-          <a class="image is-64x64"" href="">
-            <img src="/static/icons/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+          <a class="image is-64x64"" href="/home">
+            <img src="/static/icons/F112D4BE-BD7F-4100-9658-548FBF7FE2B6.png" alt="Bulma: a modern CSS framework based on Flexbox" width="64" height="64">
           </a>
-      </nav>
+        </div>
+        
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Register
+                </a>
+            </div>
+        </div>
+    </nav>
+    {% with messeges = get_flashed_messages(with_categories = True) %}
+    {% if messeges %}
+        {% for message in messeges %}
+            {% if category == 'error' %}
+                <div class="notification is-warning is-danger">
+                    {{ message }}
+                    <button class="delete"></button>
+                </div>
+            {%else%}
+                <div class="notification is-primary is-light">
+                    {{ message }}
+                    <button class="delete"></button>
+                </div>
+            {%endif%}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <form method="POST" style="text-align: center">
+        <p><input type="text" name="username" placeholder="Enter Username"/></p>
+        <p><input type="password" name="password" placeholder="Enter Password"/></p>
+        <p><input type="text" name="phonenumber" placeholder="Enter Phone Number"/></p>
+        <p><button type="submit">Register</button></p>
+    </form>
 </body>
 </html>
