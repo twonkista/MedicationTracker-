@@ -1,7 +1,9 @@
 From SparkHacks,
 
 A python flask backend with a bulma HTML medication tracker used to track the type of medications
-Users are logges on a sql database(no funny business)
+
+Users are logged on a sql database(no funny business)
+
 This is the first build of the application and there are more features to come
 
 Such features include:
