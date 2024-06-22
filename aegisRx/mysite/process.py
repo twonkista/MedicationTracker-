@@ -19,14 +19,14 @@ def getData(ncode):
     data = response.json()
     if(data['feed']['entry']): 
     # Print out the first result's summary:
-      print("First article: ",data['feed']['entry'][0]['summary']['_value'])
+      return data['feed']['entry'][0]['summary']['_value']
       
       # Save the data to a local JSON file
-      with open("data.json", "w") as file:
+      # with open("data.json", "w") as file:
         # Inputs the data of the first entry including the name and the summary
-        json.dump(data['feed']['entry'][0], file)
+        # json.dump(data['feed']['entry'][0], file)
     else:
-      print("Nothing found")
+      return "Nothing found"
   
   else:
     print("Error: Failed to retrieve data from the MedLine Connect Plus API")
@@ -34,16 +34,24 @@ def getData(ncode):
 def getInteractions(ncode):
   base_url = "https://api.fda.gov/drug/label.json?"
   search = {
-  "search":"openfda.product_ndc.exact:\"50090-0481\""
+  "search":"openfda.product_ndc.exact:"+"\""+ncode+"\""
   }
   response = requests.get(base_url, params=search)
   # Extract the data from the response
   data = response.json()
-  if(data['results'][0]['drug_interactions_table']):
-    return data['results'][0]['drug_interactions_table']
+  if('results' in data):
+      if('drug_interactions_table' in data['results'][0]):
+        return data['results'][0]['drug_interactions_table']
+      elif('drug_interactions' in data['results'][0]):
+        return data['results'][0]['drug_interactions']
+      elif('warnings' in data['results']):
+        return data['results'][0]['warnings']
+      elif('warnings_and_cautions' in data['results'][0]):
+        return data['results'][0]['warnings_and_cautions']
+      else:
+        return "Nothing Found"
   else:
-    print("No interactions found")
-    return " "
+    return "No medication found for that NDC code"
   
 # Use code in the botom to test it
 # ncodeValue = input("Enter the ndc Code you want to see data for: ")
