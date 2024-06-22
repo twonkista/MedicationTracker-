@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request,flash
 from flask_login import login_user, login_required, logout_user, current_user
 from .models import Medication
 from . import db
+from process import getInteractions, getData
 
 views = Blueprint('views', __name__)
 
@@ -29,8 +30,12 @@ def dashboard():
         reason = request.form.get('reason')
         freq = request.form.get('freqdays')
 
-
         newMed = Medication(drug_name = drug, reason = reason,freq_in_Days = freq,user_id = current_user.id)
         db.session.add(newMed)
         db.session.commit()
     return render_template('dashboard.html',user=current_user)
+@views.route('/researchInteractions',methods =['GET','POST'])
+def extraInfo():
+    if(request.method=='POST'):
+        code = code = request.form.get('ndcCode')
+    return render_template('ResearchInteractions.html',ndcCodeResearch = getData(code), ndcCodeInteractions = getInteractions(code))
